@@ -10,6 +10,7 @@ define('CARPETA_IMAGENES', $_SERVER['DOCUMENT_ROOT'] . '/imagenes/');
 
 function incluirTemplate($nombre, $inicio = false)
 {
+    
     include TEMPLATES_URL . "/${nombre}.php";
 }
 
