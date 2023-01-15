@@ -67,16 +67,16 @@ class PaginasController{
 
             // configurar SMTP
             $mail->isSMTP();
-            $mail->Host = 'smtp.mailtrap.io';
+            $mail->Host = 'smtp-relay.sendinblue.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'c02ba56b99990e';
-            $mail->Password = 'b198e5cea5f961';
+            $mail->Username = 'bikuhan@hotmail.com';
+            $mail->Password = 'xsmtpsib-3cc0fb975fe8856a2e36c795c79dd2617fa711501cbcbeed2c8a7f7959ff71b3-R9WvCFOAfw2GXK0P';
             $mail->SMTPSecure = 'tls';
-            $mail->Port = 2525;
+            $mail->Port = 587;
 
             // CONFIGURAR CONTENIDO DEL MAIL
-            $mail->setFrom('admin@bienesraices.com');
-            $mail->addAddress($respuestas['email'], $respuestas['Nombre']);
+            $mail->setFrom('Sam@bienesraices.com');
+            $mail->addAddress($respuestas['email']);
             $mail->Subject = 'Tienes un Nuevo Mensaje';
 
             //HABILITAR HTML
