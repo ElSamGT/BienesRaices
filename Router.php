@@ -2,7 +2,7 @@
 
 namespace MVC;
 
-class Router {
+class Router{
 
     public $rutasGET = [];
     public $rutasPOST = [];
