@@ -7,7 +7,7 @@ use Model\Admin;
 class LoginController {
     public static function login(Router $router){
         $errores = [];
-        $inicio = true;
+        $inicio = false;
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $auth = new Admin($_POST);
