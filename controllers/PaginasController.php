@@ -19,12 +19,13 @@ class PaginasController{
         ]);
     }
     public static function nosotros(Router $router){
+        $inicio = false;
         $router->render('paginas/nosotros');
     }
     public static function propiedades(Router $router){
 
         $propiedades = Propiedad::all();
-
+        $inicio = false;
         $router->render('paginas/propiedades', [
             'propiedades' => $propiedades
         ]);
@@ -36,26 +37,31 @@ class PaginasController{
 
         // BUSCAR LA PROPIEDAD POR US ID
         $propiedad = Propiedad::find($id);
+        $inicio = false;
 
         $router->render('paginas/propiedad', [
-            'propiedad' => $propiedad
+            'propiedad' => $propiedad,
+            'inicio' => $inicio
         ]);
     }
     public static function blog(Router $router){
+        $inicio = false;
         $router->render('paginas/blog', [
-
+            'inicio' => $inicio
         ]);
     }
     public static function entrada(Router $router){
 
-
+        $inicio = false;
         $router->render('paginas/entrada', [
+            'inicio' => $inicio
 
         ]);
     }
     public static function contacto(Router $router){
 
         $mensaje = null;
+        $inicio = false;
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
@@ -119,7 +125,8 @@ class PaginasController{
         }
 
         $router->render('paginas/contacto', [
-            'mensaje' => $mensaje
+            'mensaje' => $mensaje,
+            'inicio' => $inicio
         ]);
     }
 
