@@ -171,7 +171,7 @@ class ActiveRecord{
     // BUSCA UN REGISTRO POR SU ID
     public static function find($id){
         // CONSULTA PARA OPTENER REGISTRO
-        $query = " SELECT * FROM " . static::$tabla . " WHERE id = ${id}";
+        $query = " SELECT * FROM " . static::$tabla . " WHERE id = ". $id;
 
         $resultado = self::consultarSQL($query);
 
