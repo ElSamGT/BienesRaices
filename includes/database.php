@@ -2,10 +2,10 @@
 
 function conectarDB(): mysqli{
     $db =new  mysqli(
-        $_ENV["mysql-elsamgt.alwaysdata.net"],
-        $_ENV["elsamgt"],
-        $_ENV["DB_PASSelSamgt"],
-        $_ENV["elsamgt_bienesraices"]
+        $_ENV["DB_HOST"],
+        $_ENV["DB_USER"],
+        $_ENV["DB_PASS"],
+        $_ENV["DB_BD"]
     );
 
     $db->set_charset("utf8");
