@@ -20,14 +20,18 @@ class PaginasController{
     }
     public static function nosotros(Router $router){
         $inicio = false;
-        $router->render('paginas/nosotros');
+        $router->render('paginas/nosotros',[
+            
+            'inicio' => $inicio
+        ]);
     }
     public static function propiedades(Router $router){
 
         $propiedades = Propiedad::all();
         $inicio = false;
         $router->render('paginas/propiedades', [
-            'propiedades' => $propiedades
+            'propiedades' => $propiedades,
+            'inicio' => $inicio
         ]);
     }
     public static function propiedad(Router $router){
