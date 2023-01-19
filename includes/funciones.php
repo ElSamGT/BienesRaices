@@ -11,7 +11,7 @@ define('CARPETA_IMAGENES', $_SERVER['DOCUMENT_ROOT'] . '/imagenes/');
 function incluirTemplate($nombre, $inicio = false)
 {
     
-    include TEMPLATES_URL . "/${nombre}.php";
+    include TEMPLATES_URL . "/" . $nombre .".php";
 }
 
 function estaAutenticado()
@@ -88,7 +88,7 @@ function validarORedireccionar(string $url, string $var, string $class)
             break;
     }
     if ($$var === null || !$id) {
-        header("Location: ${url}");
+        header("Location: ". $url);
     }
     return $id;
 }
