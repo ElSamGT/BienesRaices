@@ -80,8 +80,7 @@ class PaginasController{
             $mail->Host = 'smtp-relay.sendinblue.com';
             $mail->SMTPAuth = true;
             $mail->Username = 'bikuhan@hotmail.com';
-            $mail->Password = 'xsmtpsib-3cc0fb975fe8856a2e36c795c79dd2617fa711501cbcbeed2c8a7f7959ff71b3-R9WvCFOAfw2GXK0P';
-            $mail->SMTPSecure = 'tls';
+            $mail->Password = 'xsmtpsib-3cc0fb975fe8856a2e36c795c79dd2617fa711501cbcbeed2c8a7f7959ff71b3-vqMjByGCfUxgKINP';
             $mail->Port = 587;
 
             // CONFIGURAR CONTENIDO DEL MAIL

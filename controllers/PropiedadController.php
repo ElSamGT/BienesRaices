@@ -14,6 +14,7 @@ class PropiedadController
     {
         $propiedades = Propiedad::all();
         $vendedores = Vendedor::all();
+        $inicio = false;
 
         // MUESTRA MENSAJE CONDICIONAL
         $mensaje = $_GET['mensaje'] ?? null;
@@ -21,7 +22,8 @@ class PropiedadController
         $router->render('propiedades/admin', [
             'propiedades' => $propiedades,
             'mensaje' => $mensaje,
-            'vendedores' => $vendedores
+            'vendedores' => $vendedores,
+            'inicio' => $inicio
         ]);
     }
     public static function crear(Router $router)
@@ -69,12 +71,14 @@ class PropiedadController
                 $propiedad->guardar();
             }
         }
+        $inicio = false;
 
 
         $router->render('propiedades/crear', [
             'propiedad' => $propiedad,
             'vendedores_id' => $vendedores_id,
-            'errores' => $errores
+            'errores' => $errores,
+            'inicio' => $inicio
         ]);
     }
     public static function actualizar(Router $router)
@@ -125,11 +129,13 @@ class PropiedadController
                 $propiedad->guardar();
             }
         }
+        $inicio = false;
 
         $router->render('/propiedades/actualizar', [
             'propiedad' => $propiedad,
             'errores' => $errores,
-            'vendedores_id' => $vendedores_id
+            'vendedores_id' => $vendedores_id,
+            'inicio' => $inicio
         ]);
     }
 
