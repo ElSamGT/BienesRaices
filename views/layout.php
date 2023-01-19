@@ -3,6 +3,7 @@
         session_start();
     }
     $auth= $_SESSION['login'] ?? null;
+    $inicio= '';
 ?>
 <!DOCTYPE html>
 <html lang="en">
